@@ -5,17 +5,27 @@
   box-sizing: border-box;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+/* Body and HTML settings for full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
+.content-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; 
+}
+
+/* Main content grows to fill available space */
 .main-content {
   flex: 1; 
+  padding: 20px;
 }
 
-/* Header style */
+/* Header styles */
 .header {
   display: flex;
   justify-content: space-between;
@@ -23,18 +33,17 @@ body {
   padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .header h1 {
   margin: 0;
 }
 
-/* Navigation styles */
 nav {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -47,24 +56,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #4CAF50;
-}
-
-
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column; 
-    align-items: flex-start; 
-  }
-
-  nav {
-    width: 100%;
-    justify-content: flex-start; 
-  }
-
-  nav a {
-    width: 100%; 
-  }
+  background-color: #45a049;
 }
 
 /* Search section */
@@ -76,10 +68,11 @@ nav a:hover {
 }
 
 .search-input {
-  width: 100%; 
-  max-width: 400px; 
+  width: 100%;
+  max-width: 400px;
   padding: 10px;
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .search-btn {
@@ -87,23 +80,13 @@ nav a:hover {
   background-color: #4CAF50;
   color: white;
   border: none;
-  cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .search-btn:hover {
   background-color: #45a049;
-}
-
-@media (max-width: 768px) {
-  .search-section {
-    padding: 10px;
-  }
-
-  .search-input {
-    width: 90%;
-  }
 }
 
 /* Nearby Cars Section */
@@ -117,11 +100,10 @@ nav a:hover {
   margin-bottom: 15px;
   border-radius: 5px;
   background-color: #f9f9f9;
-  text-align: left;
 }
 
 .car-card h3 {
-  margin: 0 0 10px;
+  margin-bottom: 10px;
 }
 
 .car-card button {
@@ -137,24 +119,17 @@ nav a:hover {
   background-color: #45a049;
 }
 
-
-@media (min-width: 768px) {
-  .nearby-cars {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 15px;
-  }
-
-  .car-card {
-    margin: 0; 
-  }
-}
-
 /* Footer styles */
 .bottom-nav {
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+
+  /* Flex layout for responsiveness */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .bottom-nav a {
@@ -169,16 +144,47 @@ nav a:hover {
   background-color: #45a049;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+
   .bottom-nav {
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
   }
 
   .bottom-nav a {
-    margin-bottom: 10px; 
-    width: 90%; 
+    margin-bottom: 10px;
+    width: 90%;
     text-align: center;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .search-input, .search-btn {
+    font-size: 14px;
+  }
+
+  .car-card {
+    padding: 10px;
   }
 }
 
