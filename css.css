@@ -1,0 +1,103 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #0074cc;
+    color: white;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .top-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+  
+  /* Main Content */
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .search-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-btn {
+    padding: 0.7rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #0074cc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Nearby Cars Section */
+  .nearby-cars h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .car-card {
+    background-color: #f3f3f3;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .car-card h3 {
+    font-size: 1.1rem;
+    color: #0074cc;
+  }
+  
+  .book-btn {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    color: white;
+    background-color: #0074cc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Bottom Navigation */
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+    background-color: #0074cc;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .bottom-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
