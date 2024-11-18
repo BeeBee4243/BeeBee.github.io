@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Car | UniDrive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="content-wrapper">
+    <!-- Header -->
+    <header class="header">
+      <h1>UniDrive</h1>
+      <nav class="top-nav">
+        <a href="#search">Sök</a>
+        <a href="#profile">Profil</a>
+        <a href="#bookings">Bokningar</a>
+      </nav>
+    </header>
+
+    <!-- Booking Form -->
+    <main class="main-content">
+      <h2>Booka en Bil</h2>
+
+      <form action="/submit-booking" method="POST" class="booking-form">
+        <div class="form-group">
+          <label for="car">Välj Bil</label>
+          <select id="car" name="car" required>
+            <option value="tesla_model_3">Tesla Model 3</option>
+            <option value="volvo_xc40">Volvo XC40</option>
+            <option value="bmw_i3">BMW i3</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pickup-location">Plats för Upphämtning</label>
+          <input type="text" id="pickup-location" name="pickup-location" placeholder="Ange plats" required>
+        </div>
+
+        <div class="form-group">
+          <label for="pickup-time">Upphämtningstid</label>
+          <input type="datetime-local" id="pickup-time" name="pickup-time" required>
+        </div>
+
+        <div class="form-group">
+          <label for="duration">Tidslängd (i timmar)</label>
+          <input type="number" id="duration" name="duration" min="1" max="24" required>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="book-btn">Boka Bil</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bottom-nav">
+    <a href="#home">Hem</a>
+    <a href="#favorites">Favoriter</a>
+    <a href="#bookings">Bokningar</a>
+    <a href="#profile">Profil</a>
+  </footer>
+</body>
+</html>
